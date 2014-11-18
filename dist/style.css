@@ -75,19 +75,36 @@
 .todolists.active, .todos.active {
     display: block;
 }
-@keyframe fadeDown {
+@-webkit-keyframes fadeDown {
     0% {
         opacity: 0;
         -webkit-transform: translateY(-2em);
-            -ms-transform: translateY(-2em);
                 transform: translateY(-2em);
     }
     100% {
         opacity: 1;
         -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
                 transform: translateY(0);
     }
+}
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-2em);
+                transform: translateY(-2em);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
+.remove {
+    display: inline-block;
+    float: right;
+    border: .1em solid #efefef;
+    padding: .2em .3em;
 }
 /**
  * todos

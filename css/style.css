@@ -75,7 +75,7 @@
 .todolists.active, .todos.active {
     display: block;
 }
-@keyframe fadeDown {
+@keyframes fadeDown {
     0% {
         opacity: 0;
         transform: translateY(-2em);
@@ -84,6 +84,13 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.remove {
+    display: inline-block;
+    float: right;
+    border: .1em solid #efefef;
+    padding: .2em .3em;
 }
 /**
  * todos

@@ -15,6 +15,14 @@
                 self.$el.append(subview.el);
                 self.$el.append("\n");
             })
+            
+        },
+        initialize: function(){
+            var self = this;
+            $.subscribe("todolist_deleted", function(error, model){
+                self.collection.remove(model)
+                self.render(self.collection);
+            })
             // 3. ... append a TodoListView(model)
         }
     });
